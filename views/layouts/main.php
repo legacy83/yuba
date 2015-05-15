@@ -26,14 +26,14 @@ echo \yii\bootstrap\Nav::widget( [
     'options' => [ 'class' => 'navbar-nav navbar-left' ],
     'items' => [
         [ 'label' => 'Home', 'url' => Yii::$app->homeUrl ],
-        [ 'label' => 'About', 'url' => '#' ],
+        [ 'label' => 'About', 'url' => [ '/scaffold/to-do' ] ],
     ],
 ] );
 echo \yii\bootstrap\Nav::widget( [
     'options' => [ 'class' => 'navbar-nav navbar-right' ],
     'items' => [
-        [ 'label' => '@todo', 'url' => '#' ],
-        [ 'label' => '@foo', 'url' => '#' ],
+        [ 'label' => '@todo', 'url' => \yii\helpers\Url::to( [ '/scaffold/to-do' ] ) ],
+        [ 'label' => '@foo', 'url' => \yii\helpers\Url::to( [ '/scaffold/to-do' ] ) ],
     ],
 ] );
 \yii\bootstrap\NavBar::end();
