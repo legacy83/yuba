@@ -32,8 +32,8 @@ echo \yii\bootstrap\Nav::widget( [
 echo \yii\bootstrap\Nav::widget( [
     'options' => [ 'class' => 'navbar-nav navbar-right' ],
     'items' => [
-        [ 'label' => '@todo', 'url' => \yii\helpers\Url::to( [ '/scaffold/to-do' ] ) ],
-        [ 'label' => '@foo', 'url' => \yii\helpers\Url::to( [ '/scaffold/to-do' ] ) ],
+        [ 'label' => '@todo', 'url' => [ '/scaffold/to-do' ] ],
+        [ 'label' => '@foo', 'url' => [ '/scaffold/foo' ] ],
     ],
 ] );
 \yii\bootstrap\NavBar::end();
