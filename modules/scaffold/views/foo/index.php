@@ -1,25 +1,69 @@
 <?php /* @var $this yii\web\View */ ?>
-<?php $this->title = '@todo'; ?>
+<?php /** @var $foo \app\modules\scaffold\models\Foo */ ?>
+<?php /** @var $foos array */ ?>
+<?php $this->title = '@foo'; ?>
 
 <div class="page-header">
-    <h1>@todo</h1>
+    <h1>@foo</h1>
 </div>
 
 <div class="row">
 
-    <div class="col-md-6">
+    <div class="col-md-12">
 
-        <h4>@todo</h4>
+        <table class="table table-hover table-bordered">
 
-        <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>@one</th>
+                <th>@two</th>
+                <th>@three</th>
+                <th></th>
+            </tr>
+            </thead>
+
+            <tbody>
+
+            <?php foreach ( $foos as $foo ) : ?>
+
+                <tr>
+                    <td><?php echo $foo->id; ?></td>
+                    <td>@one</td>
+                    <td>@two</td>
+                    <td>@three</td>
+                    <td>
+
+                        <a href="#"><span class="glyphicon glyphicon-link"></span></a>
+                        <a href="#"><span class="glyphicon glyphicon-edit"></span></a>
+                        <a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+
+                    </td>
+                </tr>
+
+            <?php endforeach; ?>
+
+            </tbody>
+
+        </table>
 
     </div>
 
-    <div class="col-md-6">
+    <div class="col-md-12">
 
-        <h4>@todo</h4>
+        <div class="panel panel-default">
+            <div class="panel-body">
 
-        <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+                <div class="pull-left"></div>
+
+                <div class="pull-right">
+
+                    <a class="btn btn-primary" href="#">New @foo</a>
+
+                </div>
+
+            </div>
+        </div>
 
     </div>
 
