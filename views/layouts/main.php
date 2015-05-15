@@ -1,18 +1,18 @@
 <?php /* @var $this \yii\web\View */ ?>
 <?php /* @var $content string */ ?>
 <?php \app\assets\AppAsset::register( $this ); ?>
-<?php $this->beginPage() ?>
+<?php $this->beginPage(); ?>
 <!DOCTYPE html>
-<html lang="<?= Yii::$app->language ?>">
+<html lang="<?= Yii::$app->language; ?>">
 <head>
-    <meta charset="<?= Yii::$app->charset ?>">
+    <meta charset="<?= Yii::$app->charset; ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?= \yii\helpers\Html::encode( $this->title ) ?></title>
-    <?php $this->head() ?>
+    <title><?= \yii\helpers\Html::encode( $this->title ); ?></title>
+    <?php $this->head(); ?>
 </head>
 <body>
 
-<?php $this->beginBody() ?>
+<?php $this->beginBody(); ?>
 
 <?php
 \yii\bootstrap\NavBar::begin( [
@@ -41,17 +41,17 @@ echo \yii\bootstrap\Nav::widget( [
 
 <div class="container">
 
-    <?= $content ?>
+    <?= $content; ?>
 
     <hr>
 
     <footer>
-        <p>&copy; Zuba <?php echo date( 'Y' ); ?></p>
+        <p>&copy; Yuba <?php echo date( 'Y' ); ?></p>
     </footer>
 
 </div>
 
-<?php $this->endBody() ?>
+<?php $this->endBody(); ?>
 </body>
 </html>
-<?php $this->endPage() ?>
+<?php $this->endPage(); ?>

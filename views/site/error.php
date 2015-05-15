@@ -1,27 +1,25 @@
-<?php
+<?php /* @var $this yii\web\View */ ?>
+<?php /* @var $name string */ ?>
+<?php /* @var $message string */ ?>
+<?php /* @var $exception Exception */ ?>
+<?php $this->title = $name; ?>
 
-use yii\helpers\Html;
+<div class="alert alert-danger">
+    <?= nl2br( \yii\helpers\Html::encode( $message ) ); ?>
+</div>
 
-/* @var $this yii\web\View */
-/* @var $name string */
-/* @var $message string */
-/* @var $exception Exception */
+<div class="page-header">
+    <h1><?= \yii\helpers\Html::encode( $this->title ); ?></h1>
+</div>
 
-$this->title = $name;
-?>
-<div class="site-error">
+<div class="row">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <div class="col-md-12">
 
-    <div class="alert alert-danger">
-        <?= nl2br(Html::encode($message)) ?>
+        <p>The above error occurred while the Web server was processing your request.</p>
+
+        <p>Please contact us if you think this is a server error. Thank you.</p>
+
     </div>
-
-    <p>
-        The above error occurred while the Web server was processing your request.
-    </p>
-    <p>
-        Please contact us if you think this is a server error. Thank you.
-    </p>
 
 </div>

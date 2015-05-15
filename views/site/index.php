@@ -1,51 +1,51 @@
-<?php
-/* @var $this yii\web\View */
-$this->title = 'My Yii Application';
-?>
-<div class="site-index">
+<?php /* @var $this yii\web\View */ ?>
+<?php $this->title = 'Yuba'; ?>
 
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
+<div class="jumbotron">
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
+    <h1>Welcome to Yuba</h1>
 
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
+    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus
+        commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
 
-    <div class="body-content">
+    <p><a class="btn btn-success btn-lg" href="https://github.com/trsenna/yuba" target="_blank">Just fork Yuba today</a></p>
 
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
+</div>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+<div class="row">
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
+    <div class="col-md-6">
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+        <h4>Subheading</h4>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+        <h4>Subheading</h4>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
-            </div>
-        </div>
+        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet
+            fermentum.</p>
+
+        <h4>Subheading</h4>
+
+        <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
 
     </div>
+
+    <div class="col-md-6">
+
+        <h4>Subheading</h4>
+
+        <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+
+        <h4>Subheading</h4>
+
+        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet
+            fermentum.</p>
+
+        <h4>Subheading</h4>
+
+        <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+
+    </div>
+
 </div>
