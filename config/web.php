@@ -1,7 +1,7 @@
 <?php
 
 $config = [
-    
+
     'id' => 'yuba',
     'basePath' => dirname( __DIR__ ),
     'bootstrap' => [ 'log' ],
@@ -68,6 +68,16 @@ $config = [
      */
 
     'params' => require( __DIR__ . '/params.php' ),
+
+    /*
+     * modules
+     */
+
+    'modules' => [
+        'scaffold' => [
+            'class' => 'app\modules\scaffold\Module',
+        ],
+    ],
 ];
 
 if ( YII_ENV_DEV ) {
@@ -77,10 +87,16 @@ if ( YII_ENV_DEV ) {
      */
 
     $config[ 'bootstrap' ][ ] = 'debug';
-    $config[ 'modules' ][ 'debug' ] = 'yii\debug\Module';
+    $config[ 'modules' ][ 'debug' ] = [
+        'class' => 'yii\debug\Module',
+        'allowedIPs' => [ '*' ],
+    ];
 
     $config[ 'bootstrap' ][ ] = 'gii';
-    $config[ 'modules' ][ 'gii' ] = 'yii\gii\Module';
+    $config[ 'modules' ][ 'gii' ] = [
+        'class' => 'yii\gii\Module',
+        'allowedIPs' => [ '*' ],
+    ];
 }
 
 return $config;
