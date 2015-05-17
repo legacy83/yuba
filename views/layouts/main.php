@@ -8,6 +8,7 @@
     <meta charset="<?= Yii::$app->charset; ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= \yii\helpers\Html::encode( $this->title ); ?></title>
+    <?= \yii\helpers\Html::csrfMetaTags(); ?>
     <?php $this->head(); ?>
 </head>
 <body>

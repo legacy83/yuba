@@ -1,10 +1,14 @@
 <?php /* @var $this yii\web\View */ ?>
 <?php /** @var $foo \app\modules\scaffold\models\Foo */ ?>
-<?php $this->title = 'Show @foo'; ?>
+<?php $this->title = 'Destroy @foo'; ?>
 
 <div class="page-header">
-    <h1>Show @foo</h1>
+    <h1>Destroy @foo</h1>
 </div>
+
+<?php $form = \yii\widgets\ActiveForm::begin(); ?>
+
+<input type="hidden" name="id" value="<?= $foo->id; ?>">
 
 <div class="row">
 
@@ -15,7 +19,7 @@
             <thead>
             <tr>
                 <th>ID</th>
-                <th><?php echo $foo->id; ?></th>
+                <th><?= $foo->id; ?></th>
             </tr>
             </thead>
 
@@ -43,26 +47,23 @@
         <div class="panel panel-default">
             <div class="panel-body">
 
+                <p>Are you sure about destroying @foo?</p>
+
                 <div class="pull-left"></div>
 
                 <div class="pull-right">
 
-                    <a class="btn btn-default" href="<?= \yii\helpers\Url::toRoute( [ '/scaffold/foo' ] ); ?>">Cancel</a>
-                    <a class="btn btn-primary" href="<?= \yii\helpers\Url::toRoute( [ '/scaffold/foo/edit', 'id' => $foo->id ] ); ?>">Edit</a>
+                    <input type="submit" class="btn btn-default" name="destroySubmitNo" value="No">
+                    <input type="submit" class="btn btn-danger" name="destroySubmitYes" value="Yes">
 
                 </div>
 
             </div>
-
-            <ul class="list-group">
-                <li class="list-group-item">
-                    Would you like to destroy @foo?
-                    <a class="text-danger" href="<?= \yii\helpers\Url::toRoute( [ '/scaffold/foo/destroy', 'id' => $foo->id ] ); ?>">Yes!</a>
-                </li>
-            </ul>
 
         </div>
 
     </div>
 
 </div>
+
+<?php \yii\widgets\ActiveForm::end(); ?>

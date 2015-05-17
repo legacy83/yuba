@@ -31,4 +31,27 @@ class FooController extends Controller
             'foo' => $foo
         ] );
     }
+
+    public function actionDestroy()
+    {
+        $request = \Yii::$app->request;
+        $session = \Yii::$app->session;
+
+        if ( $request->post( 'destroySubmitYes' ) ) {
+            $session->setFlash( 'success', '@foo destroyed successfully' );
+            die('destroySubmitYes');
+        }
+
+        if ( $request->post( 'destroySubmitNo' ) ) {
+            die('destroySubmitNo');
+        }
+
+        $foo = Foo::buildFromId(
+            $request->get( 'id' )
+        );
+
+        return $this->render( 'destroy', [
+            'foo' => $foo
+        ] );
+    }
 }
