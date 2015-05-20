@@ -39,11 +39,11 @@ class FooController extends Controller
 
         if ( $request->post( 'createSubmitCreate' ) ) {
             $session->setFlash( 'success', '@foo created successfully' );
-            $this->redirect( [ '/scaffold/foo' ] );
+            return $this->redirect( [ '/scaffold/foo' ] );
         }
 
         if ( $request->post( 'createSubmitCancel' ) ) {
-            $this->redirect( [ '/scaffold/foo' ] );
+            return $this->redirect( [ '/scaffold/foo' ] );
         }
 
         return $this->render( 'create' );
@@ -56,11 +56,11 @@ class FooController extends Controller
 
         if ( $request->post( 'editSubmitSave' ) ) {
             $session->setFlash( 'success', '@foo modified successfully' );
-            $this->redirect( [ '/scaffold/foo' ] );
+            return $this->redirect( [ '/scaffold/foo' ] );
         }
 
         if ( $request->post( 'editSubmitCancel' ) ) {
-            $this->redirect( [ '/scaffold/foo' ] );
+            return $this->redirect( [ '/scaffold/foo' ] );
         }
 
         $foo = Foo::buildFromId(
@@ -79,11 +79,11 @@ class FooController extends Controller
 
         if ( $request->post( 'destroySubmitYes' ) ) {
             $session->setFlash( 'success', '@foo destroyed successfully' );
-            $this->redirect( [ '/scaffold/foo' ] );
+            return $this->redirect( [ '/scaffold/foo' ] );
         }
 
         if ( $request->post( 'destroySubmitNo' ) ) {
-            $this->redirect( [ '/scaffold/foo' ] );
+            return $this->redirect( [ '/scaffold/foo' ] );
         }
 
         $foo = Foo::buildFromId(
