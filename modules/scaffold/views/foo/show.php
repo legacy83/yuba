@@ -15,7 +15,7 @@
             <thead>
             <tr>
                 <th>ID</th>
-                <th><?php echo $foo->id; ?></th>
+                <th><?= \yii\helpers\Html::encode( $foo->id ); ?></th>
             </tr>
             </thead>
 
