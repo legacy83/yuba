@@ -42,7 +42,7 @@ echo \yii\bootstrap\Nav::widget( [
 
 <div class="container">
 
-    <?= Yii::$app->session->getFlash( 'success' ); ?>
+    <?= $this->render( 'partials/flash-messages.php' ); ?>
 
     <?= $content; ?>
 
