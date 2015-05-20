@@ -1,6 +1,6 @@
 <?php /* @var $this yii\web\View */ ?>
 <?php /** @var $foo \app\modules\scaffold\models\Foo */ ?>
-<?php $this->title = 'New @foo'; ?>
+<?php $this->title = 'Edit @foo'; ?>
 
 <div class="page-header">
     <h1>Edit @foo</h1>

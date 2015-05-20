@@ -1,11 +1,13 @@
 <?php /* @var $this yii\web\View */ ?>
 <?php $this->title = 'New @foo'; ?>
 
-    <div class="page-header">
-        <h1>New @foo</h1>
-    </div>
+<div class="page-header">
+    <h1>New @foo</h1>
+</div>
 
-<?php $form = \yii\widgets\ActiveForm::begin( [ 'options' => [ 'class' => 'form-horizontal' ] ] ); ?>
+<form action="<?= \yii\helpers\Url::toRoute( [ '/scaffold/foo/create' ] ); ?>" method="post" class="form-horizontal">
+
+    <input type="hidden" name="_csrf">
 
     <div class="row">
 
@@ -65,4 +67,4 @@
 
     </div>
 
-<?php \yii\widgets\ActiveForm::end(); ?>
+</form>
