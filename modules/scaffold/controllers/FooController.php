@@ -32,6 +32,23 @@ class FooController extends Controller
         ] );
     }
 
+    public function actionCreate()
+    {
+        $request = \Yii::$app->request;
+        $session = \Yii::$app->session;
+
+        if ( $request->post( 'createSubmitCreate' ) ) {
+            $session->setFlash( 'success', '@foo created successfully' );
+            $this->redirect( [ '/scaffold/foo' ] );
+        }
+
+        if ( $request->post( 'createSubmitCancel' ) ) {
+            $this->redirect( [ '/scaffold/foo' ] );
+        }
+
+        return $this->render( 'create' );
+    }
+
     public function actionDestroy()
     {
         $request = \Yii::$app->request;
@@ -39,11 +56,11 @@ class FooController extends Controller
 
         if ( $request->post( 'destroySubmitYes' ) ) {
             $session->setFlash( 'success', '@foo destroyed successfully' );
-            die('destroySubmitYes');
+            $this->redirect( [ '/scaffold/foo' ] );
         }
 
         if ( $request->post( 'destroySubmitNo' ) ) {
-            die('destroySubmitNo');
+            $this->redirect( [ '/scaffold/foo' ] );
         }
 
         $foo = Foo::buildFromId(

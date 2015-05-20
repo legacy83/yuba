@@ -58,7 +58,7 @@
 
                 <div class="pull-right">
 
-                    <a class="btn btn-primary" href="#">New @foo</a>
+                    <a class="btn btn-primary" href="<?= \yii\helpers\Url::toRoute( [ '/scaffold/foo/create' ] ); ?>">New @foo</a>
 
                 </div>
 

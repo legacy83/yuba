@@ -2,7 +2,9 @@
 
 namespace app\modules\scaffold\models;
 
-class Foo
+use yii\base\Model;
+
+class Foo extends Model
 {
     public $id;
 
