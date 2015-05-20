@@ -49,6 +49,29 @@ class FooController extends Controller
         return $this->render( 'create' );
     }
 
+    public function actionEdit()
+    {
+        $request = \Yii::$app->request;
+        $session = \Yii::$app->session;
+
+        if ( $request->post( 'editSubmitSave' ) ) {
+            $session->setFlash( 'success', '@foo modified successfully' );
+            $this->redirect( [ '/scaffold/foo' ] );
+        }
+
+        if ( $request->post( 'editSubmitCancel' ) ) {
+            $this->redirect( [ '/scaffold/foo' ] );
+        }
+
+        $foo = Foo::buildFromId(
+            $request->get( 'id' )
+        );
+
+        return $this->render( 'edit', [
+            'foo' => $foo
+        ] );
+    }
+
     public function actionDestroy()
     {
         $request = \Yii::$app->request;
