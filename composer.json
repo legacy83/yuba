@@ -1,11 +1,9 @@
 {
   "name": "trsenna/yuba",
   "description": "Just one more custom Yii2 starter application",
-  "minimum-stability": "stable",
   "require": {
     "php": ">=5.5.9",
-    "yiisoft/yii2": ">=2.0.4",
-    "yiisoft/yii2-bootstrap": "*"
+    "yiisoft/yii2": ">=2.0.4"
   },
   "extra": {
     "asset-installer-paths": {
