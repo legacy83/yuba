@@ -15,7 +15,7 @@ class FooController extends Controller
         }
 
         return $this->render( 'index', [
-            'foos' => $foos,
+            'models' => $foos,
         ] );
     }
 
@@ -28,7 +28,7 @@ class FooController extends Controller
         );
 
         return $this->render( 'show', [
-            'foo' => $foo
+            'model' => $foo,
         ] );
     }
 
@@ -70,7 +70,7 @@ class FooController extends Controller
         );
 
         return $this->render( 'edit', [
-            'foo' => $foo
+            'model' => $foo,
         ] );
     }
 
@@ -94,7 +94,7 @@ class FooController extends Controller
         );
 
         return $this->render( 'destroy', [
-            'foo' => $foo
+            'model' => $foo,
         ] );
     }
 }

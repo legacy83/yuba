@@ -1,6 +1,6 @@
 <?php /* @var $this yii\web\View */ ?>
-<?php /** @var $foo scaffold\models\Foo */ ?>
-<?php /** @var $foos array */ ?>
+<?php /** @var $model scaffold\models\Foo */ ?>
+<?php /** @var $models array */ ?>
 <?php $this->title = '@foo'; ?>
 
 <div class="page-header">
@@ -25,18 +25,18 @@
 
             <tbody>
 
-            <?php foreach ( $foos as $foo ) : ?>
+            <?php foreach ( $models as $model ) : ?>
 
                 <tr>
-                    <td><?php echo $foo->id; ?></td>
+                    <td><?php echo $model->id; ?></td>
                     <td>@one</td>
                     <td>@two</td>
                     <td>@three</td>
                     <td>
 
-                        <a href="<?= \yii\helpers\Url::toRoute( [ '/scaffold/foo/show', 'id' => $foo->id ] ); ?>"><span class="glyphicon glyphicon-link"></span></a>
-                        <a href="<?= \yii\helpers\Url::toRoute( [ '/scaffold/foo/edit', 'id' => $foo->id ] ); ?>"><span class="glyphicon glyphicon-edit"></span></a>
-                        <a href="<?= \yii\helpers\Url::toRoute( [ '/scaffold/foo/destroy', 'id' => $foo->id ] ); ?>"><span class="glyphicon glyphicon-remove"></span></a>
+                        <a href="<?= \yii\helpers\Url::toRoute( [ '/scaffold/foo/show', 'id' => $model->id ] ); ?>"><span class="glyphicon glyphicon-link"></span></a>
+                        <a href="<?= \yii\helpers\Url::toRoute( [ '/scaffold/foo/edit', 'id' => $model->id ] ); ?>"><span class="glyphicon glyphicon-edit"></span></a>
+                        <a href="<?= \yii\helpers\Url::toRoute( [ '/scaffold/foo/destroy', 'id' => $model->id ] ); ?>"><span class="glyphicon glyphicon-remove"></span></a>
 
                     </td>
                 </tr>

@@ -1,5 +1,5 @@
 <?php /* @var $this yii\web\View */ ?>
-<?php /** @var $foo scaffold\models\Foo */ ?>
+<?php /** @var $model scaffold\models\Foo */ ?>
 <?php $this->title = 'Show @foo'; ?>
 
 <div class="page-header">
@@ -15,7 +15,7 @@
             <thead>
             <tr>
                 <th>ID</th>
-                <th><?= \yii\helpers\Html::encode( $foo->id ); ?></th>
+                <th><?= \yii\helpers\Html::encode( $model->id ); ?></th>
             </tr>
             </thead>
 
@@ -48,7 +48,7 @@
                 <div class="pull-right">
 
                     <a class="btn btn-default" href="<?= \yii\helpers\Url::toRoute( [ '/scaffold/foo' ] ); ?>">Cancel</a>
-                    <a class="btn btn-primary" href="<?= \yii\helpers\Url::toRoute( [ '/scaffold/foo/edit', 'id' => $foo->id ] ); ?>">Edit</a>
+                    <a class="btn btn-primary" href="<?= \yii\helpers\Url::toRoute( [ '/scaffold/foo/edit', 'id' => $model->id ] ); ?>">Edit</a>
 
                 </div>
 
@@ -57,7 +57,7 @@
             <ul class="list-group">
                 <li class="list-group-item">
                     Would you like to destroy @foo?
-                    <a class="text-danger" href="<?= \yii\helpers\Url::toRoute( [ '/scaffold/foo/destroy', 'id' => $foo->id ] ); ?>">Yes!</a>
+                    <a class="text-danger" href="<?= \yii\helpers\Url::toRoute( [ '/scaffold/foo/destroy', 'id' => $model->id ] ); ?>">Yes!</a>
                 </li>
             </ul>
 

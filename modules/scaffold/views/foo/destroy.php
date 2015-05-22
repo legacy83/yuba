@@ -1,5 +1,5 @@
 <?php /* @var $this yii\web\View */ ?>
-<?php /** @var $foo scaffold\models\Foo */ ?>
+<?php /** @var $model scaffold\models\Foo */ ?>
 <?php $this->title = 'Destroy @foo'; ?>
 
 <div class="page-header">
@@ -9,7 +9,7 @@
 <form action="<?= \yii\helpers\Url::toRoute( [ '/scaffold/foo/destroy' ] ); ?>" method="post">
 
     <input type="hidden" name="_csrf">
-    <input type="hidden" name="id" value="<?= \yii\helpers\Html::encode( $foo->id ); ?>">
+    <input type="hidden" name="id" value="<?= \yii\helpers\Html::encode( $model->id ); ?>">
 
     <div class="row">
 
@@ -20,7 +20,7 @@
                 <thead>
                 <tr>
                     <th>ID</th>
-                    <th><?= \yii\helpers\Html::encode( $foo->id ); ?></th>
+                    <th><?= \yii\helpers\Html::encode( $model->id ); ?></th>
                 </tr>
                 </thead>
 
