@@ -1,10 +1,10 @@
 <?php
 
-namespace app\modules\scaffold;
+namespace scaffold;
 
 class Module extends \yii\base\Module
 {
-    public $controllerNamespace = 'app\modules\scaffold\controllers';
+    public $controllerNamespace = 'scaffold\controllers';
     public $defaultRoute = 'to-do/index';
 
     public function init()

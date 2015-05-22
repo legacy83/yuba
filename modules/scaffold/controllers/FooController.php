@@ -1,8 +1,8 @@
 <?php
 
-namespace app\modules\scaffold\controllers;
+namespace scaffold\controllers;
 
-use app\modules\scaffold\models\Foo;
+use scaffold\models\Foo;
 use yii\web\Controller;
 
 class FooController extends Controller
@@ -39,6 +39,7 @@ class FooController extends Controller
 
         if ( $request->post( 'createSubmitCreate' ) ) {
             $session->setFlash( 'success', '@foo created successfully' );
+
             return $this->redirect( [ '/scaffold/foo' ] );
         }
 
@@ -56,6 +57,7 @@ class FooController extends Controller
 
         if ( $request->post( 'editSubmitSave' ) ) {
             $session->setFlash( 'success', '@foo modified successfully' );
+
             return $this->redirect( [ '/scaffold/foo' ] );
         }
 
@@ -79,6 +81,7 @@ class FooController extends Controller
 
         if ( $request->post( 'destroySubmitYes' ) ) {
             $session->setFlash( 'success', '@foo destroyed successfully' );
+
             return $this->redirect( [ '/scaffold/foo' ] );
         }
 

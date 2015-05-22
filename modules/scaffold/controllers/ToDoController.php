@@ -1,6 +1,6 @@
 <?php
 
-namespace app\modules\scaffold\controllers;
+namespace scaffold\controllers;
 
 use yii\web\Controller;
 

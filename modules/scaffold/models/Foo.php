@@ -1,6 +1,6 @@
 <?php
 
-namespace app\modules\scaffold\models;
+namespace scaffold\models;
 
 use yii\base\Model;
 

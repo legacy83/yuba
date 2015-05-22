@@ -1,5 +1,5 @@
 <?php /* @var $this yii\web\View */ ?>
-<?php /** @var $foo \app\modules\scaffold\models\Foo */ ?>
+<?php /** @var $foo scaffold\models\Foo */ ?>
 <?php $this->title = 'Edit @foo'; ?>
 
 <div class="page-header">

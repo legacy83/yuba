@@ -75,7 +75,7 @@ $config = [
 
     'modules' => [
         'scaffold' => [
-            'class' => 'app\modules\scaffold\Module',
+            'class' => 'scaffold\Module',
         ],
     ],
 ];
