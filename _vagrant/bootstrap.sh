@@ -26,3 +26,13 @@ echo "$mySQLCreateDB" | bash -s "yuba"
 
 rm -rf "/var/www/www.$domain/public_html"
 ln -s /vagrant/web "/var/www/www.$domain/public_html"
+
+# -- Composer Asset Plugin
+# =========================================
+composer global require "fxp/composer-asset-plugin:1.0.0"
+su -c 'composer global require "fxp/composer-asset-plugin:1.0.0"' vagrant
+
+# -- App Install/Update
+# =========================================
+cd /vagrant/ && composer install
+cd /vagrant/ && composer update
