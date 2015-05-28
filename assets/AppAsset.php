@@ -3,7 +3,6 @@
 namespace app\assets;
 
 use yii\web\AssetBundle;
-use yii\web\View;
 
 class AppAsset extends AssetBundle
 {
@@ -19,7 +18,7 @@ class AppAsset extends AssetBundle
         'yii\web\JqueryAsset',
     ];
 
-    public function registerAssetFiles( View $view )
+    public function registerAssetFiles( $view )
     {
         $view->registerCssFile( 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' );
         $view->registerJsFile( 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js' );
