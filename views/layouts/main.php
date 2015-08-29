@@ -23,7 +23,10 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand brand" href="<?= Yii::$app->homeUrl; ?>">Yuba</a>
+            <a class="navbar-brand brand" href="<?= Yii::$app->homeUrl; ?>">
+                <i class="glyphicon glyphicon-home"></i>
+                <span>Yuba</span>
+            </a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
